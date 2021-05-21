@@ -14,6 +14,8 @@ function listglobals {
     yarn global list
   elif [[ $1 == "npm" ]]; then
     npm list -g --depth 0
+  elif [[ $1 == "brew" ]]; then
+    brew list
   else
     echo "📦❓ Unknown package manager \"$1\""
   fi
@@ -24,3 +26,4 @@ alias reload="source ~/.zshrc"
 
 alias yarn:g="listglobals yarn"
 alias npm:g="listglobals npm"
+alias brew:g="listglobals brew"
